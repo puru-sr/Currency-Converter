@@ -1,8 +1,9 @@
-# Starter pipeline
+
 - task: UiPathDeploy@2
   inputs:
     orchestratorConnection: '8DEv1AMNXczW3y4U15LL3jYf62jK93n5'
-    packagesPath: '$(Build.ArtifactStagingDirectory)\Packages\currency.converter'
-    folderName: 'Currency.Converter'
+    packagesPath: $(Build.ArtifactStagingDirectory)\Packages\currency.converter'
+    folderName: ''Currency.Converter'
     entryPoints: 'OANDA Currency Converter Flowchart.xaml'
+    #environments: 'AutomationRobots' # Optional,
     traceLevel: 'Information'
