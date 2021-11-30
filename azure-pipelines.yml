@@ -5,7 +5,7 @@ stages:
    displayName: Create build artifact
    jobs:
      - job: BuildArtifact
-       pool: MYLAPTOP
+       pool: UiPath_pool
        steps:
          - script: C:\Users\ADMIN\AppData\Local\Programs\UiPath\Studio\UiRobot.exe pack $(Build.SourcesDirectory)\project.json -o $(Build.ArtifactStagingDirectory)\ -v 1.0.$(Build.BuildNumber)
            displayName: "Build the artifact"
